@@ -19,6 +19,8 @@ class Book {
 
 }
 
+// Create a book for test purposes
+const dune = new Book('Dune', 'Lee Childs', 852, true)
 
 // Create a library class with built in function for searching and updating the library
 class Library {
@@ -29,7 +31,7 @@ class Library {
     // Create function for adding book to library, function must check if book is already in library
     addBook(newBook) {
     if (!this.isInLibrary(newBook)) {
-        this.myLibrary.push(newBook);
+        this.books.push(newBook);
         }
     }
 
@@ -52,5 +54,5 @@ class Library {
 
 }
 
-
-const dune = new Book('Dune', 'Lee Childs', 852, true)
+// Create the library to store all books
+const library = new Library();

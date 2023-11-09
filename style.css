@@ -1,5 +1,7 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap');
 
+body {
+    font-family: 'Edu TAS Beginner', cursive;
 }
 
 .header {
@@ -35,6 +37,13 @@ body {
     margin-left: -50px;
     
 }
+
+.counter{
+    
+}
+
+
+
 
 .card-container {
     height: 100vh;

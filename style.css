@@ -1,0 +1,47 @@
+body {
+
+}
+
+.header {
+    color: rgb(0,0,0);
+    background-color: #0e7490;
+    width: 100vw;
+    min-height: 20vh;
+    margin-left: -10px;
+    margin-top: -10px;
+    
+}
+.header-text {
+    margin-left: 5px;
+    font-size: 70px;
+
+}
+.book-icon {
+    height: 57px;
+}
+.brand{
+    display: flex;   
+    align-items: center;
+    padding-top: 5px;
+    margin-left: 90px;
+}
+
+.sidebar-right {
+    height: 100vh;
+    min-width: 24vw;
+    background-color: #38bdf8;
+    float: right;
+    margin-right: -10px;
+    margin-left: -50px;
+    
+}
+
+.card-container {
+    height: 100vh;
+    float: left;
+    min-width: 78vw;
+    background-color: #bfdbfe;
+    margin-left: -10px;
+    margin-right: -50px;
+
+}

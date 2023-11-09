@@ -1,8 +1,4 @@
 'use strict'
-
-
-
-
 // Create the 'book' object constructor
 class Book {
     constructor(
@@ -20,7 +16,9 @@ class Book {
 }
 
 // Create a book for test purposes
-const dune = new Book('Dune', 'Lee Childs', 852, true)
+const dune = new Book('Dune', 'Lee Childs', 852, true);
+const hobbit = new Book('The Hobbit', 'JRR Tolkien', 635, true);
+const magician = new Book('The Magician', 'Dr. Chem,', 549, false);
 
 // Create a library class with built in function for searching and updating the library
 class Library {
@@ -37,7 +35,7 @@ class Library {
 
     //Check if the book is in the library already
     isInLibrary(newBook) {
-        return this.books.some((book) => book.title === title);
+        return this.books.some((book) => book.title === newBook.title);
     }
 
     // Create function to remove a book from the library
@@ -49,9 +47,6 @@ class Library {
     findBook(title) {
          return this.books.find((book) => book.title === title);
     }
-
-
-
 }
 
 // Create the library to store all books

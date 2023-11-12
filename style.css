@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Edu TAS Beginner', cursive;
+    
 }
 
 .header {
@@ -29,28 +30,119 @@ body {
 }
 
 .sidebar-right {
+    
     height: 100vh;
-    min-width: 24vw;
+    min-width: 30vw;
     background-color: #38bdf8;
     float: right;
     margin-right: -10px;
     margin-left: -50px;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .counter{
     
 }
 
+.counter-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
 
+.book-counter,
+.completed-books,
+.total-pages {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-left: 0px;
+    
+
+}
+.book-counter,
+.total-books,
+.completed-books,
+.books-read,
+.total-pages,
+.no-of-pages {
+    display: inline-block;
+    
+}
+.total-books {
+    margin-left: 120px;
+}
+.read-books {
+    margin-left: 34px;
+}
+.no-of-pages{
+    margin-left: 60px;
+}
+.total-pages{
+    margin-left: -3px;
+}
+
+.delete {
+    border-radius: 30px 10px 25px 5px;
+    background-color: rgb(212, 22, 22);
+    border: none;
+    min-width: 7rem;
+    height: 2rem;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+.info {
+    
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+span{
+    margin-top: 0.35em;
+    font-size: 1.7rem;
+}
+
+
+.hover-info{
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.hidden-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    max-width: 150px;
+    font-size: 1.5rem;
+    border: solid black;
+    background-color: black;
+    padding: 5px;
+    color: grey;
+    border-radius: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.hover-info:hover .hidden-text {
+    visibility: visible;
+    opacity: 1;
+}
 
 
 .card-container {
     height: 100vh;
     float: left;
-    min-width: 78vw;
+    min-width: 72vw;
     background-color: #bfdbfe;
     margin-left: -10px;
     margin-right: -50px;
 
 }
+
+

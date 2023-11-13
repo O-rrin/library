@@ -7,41 +7,93 @@
     <title>Library Project</title>
 </head>
 <body>
-    <div class="header">
-        <div class="brand">
-            <img src="books.png" alt="Set of stacked books - icon" class="book-icon">
-            <h1 class="header-text">Library</h1>
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="add-button">
-            <span class="plus">+</span>
-        </div>
-    </div>
-    <div class="sidebar-right">
-        <div class="counter">
-            <h2 class="counter-title">Librarian Bot</h2> 
-            <div class="info">
-                <div class="book-counter">Books</div>
-                <span class="total-books">0</span>
-            </div>
-            <div class="info">
-                <div class="completed-books">Books Finished</div>
-                <span class="read-books">0</span>
-            </div>
-                <div class="info">
-                <div class="total-pages">Total Pages</div>
-                <span class="no-of-pages">0</span>
-            </div>
-        </div>
-        <div class="delete-all">
-            <button class="delete">Erase Library</button>
-        </div>
-        <div class="hover-info">More information
+    <div id="wrapper">
 
-            <p class="hidden-text">This is a simple Library storage application that uses object constructors. </p>
+        <div class="header">
+            <div class="brand">
+                <img src="books.png" alt="Set of stacked books - icon" class="book-icon">
+                <h1 class="header-text">Library</h1>
+            </div>
+        </div>
+        <div class="card-container">
+            <div>
+                <button class="add-button">
+                    <span class="plus">+</span>
+                </button>
+            </div>
+            
+
+            <div id="pop-up" style="display: none">
+                <form id="form">
+                <p>
+                    <input
+                    id="book-title"
+                    class="titleBook"
+                    type="text"
+                    placeholder="Title"
+                    name="input"
+                    />
+                </p>
+                <p>
+                    <input
+                    id="author-name"
+                    class="authorName"
+                    type="text"
+                    placeholder="Author"
+                    name="input"
+                    />
+                </p>
+                <p>
+                    <input
+                    id="num-of-pages"
+                    class="pageNumber"
+                    type="text"
+                    placeholder="Pages"
+                    name="input"
+                    />
+                </p>
+                <div id="checkBox" class="read">
+                    <p>
+                    <label>Read</label>
+                    <input id="read" type="checkbox" name="read" name="input" />
+                    </p>
+                </div>
+                <button id="addBtn" type="button" form="form">Add to Library</button>
+                </form>
+            </div>
+
+
+            <div class="break"></div>
+            <div class="carousel">
+                <div class="book-cover"></div>
+            </div>
+        </div>
+        <div class="sidebar-right">
+            <div class="counter">
+                <h2 class="counter-title">Librarian Bot</h2> 
+                <div class="info">
+                    <div class="book-counter">Books</div>
+                    <span class="total-books">0</span>
+                </div>
+                <div class="info">
+                    <div class="completed-books">Books Finished</div>
+                    <span class="read-books">0</span>
+                </div>
+                    <div class="info">
+                    <div class="total-pages">Total Pages</div>
+                    <span class="no-of-pages">0</span>
+                </div>
+            </div>
+            <div class="delete-all">
+                <button class="delete">Erase Library</button>
+            </div>
+            <div class="hover-info">More information
+
+                <p class="hidden-text">This is a simple Library storage application that uses object constructors. </p>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -51,3 +51,18 @@ class Library {
 
 // Create the library to store all books
 const library = new Library();
+
+
+// Buttons
+const addBookBtn = document.querySelector(".add-button");
+const deleteAllBtn = document.querySelector(".delete");
+
+// Element by ID
+const inputForm = document.getElementById("pop-up");
+
+
+// Create function for Add book button to display pop up form
+const popUpForm = () => {
+    inputForm.style.display = inputForm.style.display === 'none' ? '' : 'none';
+}
+addBookBtn.onclick = () => popUpForm();

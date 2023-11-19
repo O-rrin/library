@@ -7,7 +7,7 @@
     <title>Library Project</title>
 </head>
 <body>
-    <div id="wrapper">
+    
 
         <div class="header">
             <div class="brand">
@@ -16,56 +16,58 @@
             </div>
         </div>
         <div class="card-container">
-            <div>
-                <button class="add-button">
+            <div class="plus-container">
+                <button class="add-button open">
                     <span class="plus">+</span>
                 </button>
             </div>
             
-
-            <div id="pop-up" style="display: none">
-                <form id="form">
-                <p>
-                    <input
-                    id="book-title"
-                    class="titleBook"
-                    type="text"
-                    placeholder="Title"
-                    name="input"
-                    />
-                </p>
-                <p>
-                    <input
-                    id="author-name"
-                    class="authorName"
-                    type="text"
-                    placeholder="Author"
-                    name="input"
-                    />
-                </p>
-                <p>
-                    <input
-                    id="num-of-pages"
-                    class="pageNumber"
-                    type="text"
-                    placeholder="Pages"
-                    name="input"
-                    />
-                </p>
-                <div id="checkBox" class="read">
+            <section class="modal hidden">
+                <button class="btn-close">X</button>
+                <div id="pop-up" style="">
+                    <form id="form">
                     <p>
-                    <label>Read</label>
-                    <input id="read" type="checkbox" name="read" name="input" />
+                        <input
+                        id="book-title"
+                        class="titleBook"
+                        type="text"
+                        placeholder="Title"
+                        name="input"
+                        />
                     </p>
+                    <p>
+                        <input
+                        id="author-name"
+                        class="authorName"
+                        type="text"
+                        placeholder="Author"
+                        name="input"
+                        />
+                    </p>
+                    <p>
+                        <input
+                        id="num-of-pages"
+                        class="pageNumber"
+                        type="text"
+                        placeholder="Pages"
+                        name="input"
+                        />
+                    </p>
+                    <div id="checkBox" class="read">
+                        <p>
+                        <label>Read</label>
+                        <input id="read" type="checkbox" name="read" name="input" />
+                        </p>
+                    </div>
+                    <button id="addBtn" type="button" form="form">Add to Library</button>
+                    </form>
                 </div>
-                <button id="addBtn" type="button" form="form">Add to Library</button>
-                </form>
-            </div>
-
+            </section>
+            <div class="overlay hidden"></div>
 
             <div class="break"></div>
             <div class="carousel">
-                <div class="book-cover"></div>
+                
             </div>
         </div>
         <div class="sidebar-right">
@@ -92,7 +94,7 @@
                 <p class="hidden-text">This is a simple Library storage application that uses object constructors. </p>
             </div>
         </div>
-    </div>
+    
 
     <script src="script.js"></script>
 </body>

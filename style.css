@@ -151,13 +151,16 @@ span{
     height: 100vh;
     float: left;
     min-width: 74vw;
+    max-width: 74vw;
     background-color: #bfdbfe;
     margin-left: -10px;
     margin-right: -50px;
     display: flex;
     gap: 80px;
+    justify-content: left;
     flex-wrap: wrap;
     overflow: none;
+    
 
    
     
@@ -176,9 +179,9 @@ span{
     transition-duration: 1.5s;
     position: absolute;
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 0px;
     font-family: 'Edu TAS Beginner', cursive;;
-
+    
 }
 .add-button:hover{
     height: 250px;
@@ -218,6 +221,8 @@ body{
 	border-radius: 10px 25px 25px 10px;
 	box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.3) inset, 0px 2px 0px #244f73, 0px 3px 0px #27567e, 0px 10px 40px #222;
 	border-left:1px solid #242424;        
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 .book-text{
 	font-family: 'Oswald', sans-serif;
@@ -261,21 +266,12 @@ body{
     /* Pop up form */
 
 #pop-up {
-    width: 202px;
-    margin-left: 150px;
-    margin-right: 0px;
+ 
     
 }
 #form {
     
-    border: solid 3px black;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    border-radius: 15px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    width: 202px;
-    background-color: rgba(14, 84, 112, 0.6);
-    margin-top: 15px;
+   
 }
 
 .break{
@@ -283,7 +279,96 @@ body{
     height: 0;
 }
 .carousel {
+    margin-left: 50px;
+    margin-top: -300px;
+    display: flex;
+    gap: 30px;
+    max-width: 65vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
     
-
     
 }
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 450px;
+    padding: 1.3rem;
+    min-height: 250px;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    z-index: 2;
+}
+.hidden{
+    display: none;
+}
+.modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal input {
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+.modal p {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.4rem 0 0.2rem;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  .btn-open {
+    position: absolute;
+    bottom: 150px;
+  }
+  
+  .btn-close {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+   
+    
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+ 
+  .plus-container{
+    margin-left: 50px;
+  }

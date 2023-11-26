@@ -16,9 +16,9 @@ class Book {
 }
 
 // Create a book for test purposes
-const dune = new Book('Dune', 'Lee Childs', 852, true);
-const hobbit = new Book('The Hobbit', 'JRR Tolkien', 635, true);
-const magician = new Book('The Magician', 'Dr. Chem,', 549, false);
+// const dune = new Book('Dune', 'Lee Childs', 852, true);
+// const hobbit = new Book('The Hobbit', 'JRR Tolkien', 635, true);
+// const magician = new Book('The Magician', 'Dr. Chem,', 549, false);
 
 // Create a library class with built in function for searching and updating the library
 class Library {
@@ -63,9 +63,9 @@ const inputForm = document.getElementById("pop-up");
 
 
 // Create function for Add book button to display pop up form
-const popUpForm = () => {
-    inputForm.style.display = inputForm.style.display === 'none' ? '' : 'none';
-}
+// const popUpForm = () => {
+//     inputForm.style.display = inputForm.style.display === 'none' ? '' : 'none';
+// }
 // addBookBtn.onclick = () => popUpForm();
 
 //Open the modal
@@ -85,19 +85,10 @@ const closeModal = () => {
     overlay.classList.add('hidden');
 }
 
-closeModalBtn.addEventListener("click", closeModal);
-addToLibrary.addEventListener("click", closeModal);
+// closeModalBtn.addEventListener("click", closeModal);
 
-// Create a function that stores the textbox from title as the name of the book to run in the \
-//library.addbook function 
 
-const storeDetails = () => {
-    const formTitle = document.getElementById("book-title").value;
-    const formAuthor = document.getElementById("author-name").value;
-    const formPages = document.getElementById("num-of-pages").value;
-    const formRead = document.getElementById("checkBox").checked;
-    return new Book(formTitle, formAuthor, formPages, formRead);
-}
+
 
 // Function to clear the form after a book has been added
 const clearForm = () => document.getElementById("form").reset();
@@ -122,8 +113,11 @@ const createBookCard = (book) => {
     bookCover.classList.add("book-cover");
     readBtn.classList.add("btn");
     removeBtn.classList.add("btn");
+    title.classList.add('text-of-book');
+    author.classList.add('text-of-book');
+    pages.classList.add('text-of-book');
     // Must first create the function that will change the isRead statement
-    // removeBtn.onclick = removeBook;
+    removeBtn.onclick = library.removeBook(book.title);
 
 
     // Set the divs created above to the correct text content from the inputs
@@ -145,14 +139,58 @@ const createBookCard = (book) => {
 
 }
 
+// Create a function that stores the textbox from title as the name of the book to run in the \
+//library.addbook function 
+
+const storeDetails = () => {
+    const title = document.getElementById("book-title").value;
+    const author = document.getElementById("author-name").value;
+    const pages = document.getElementById("num-of-pages").value;
+    const isRead = document.getElementById("read").checked;
+ 
+    
+    // library.addBook(new Book(title, author, pages, isRead));
+    return new Book(title, author, pages, isRead);
+    
+}
+
 
 //Add to library and carousel
 const newToLibrary = () => {
-    const newBook = storeDetails();
-    library.addBook(newBook);
+    const oneBook = storeDetails();
+    
+    // library.addBook(oneBook);
+    
+    
+    closeModal();
     clearForm();
 
-    createBookCard(newBook);
+    createBookCard(oneBook);
+
+
+    // console.log(oneBook);
+    
+    // console.log(typeof oneBook);
+
+    return library.addBook(oneBook);
+
 
 }
-addToLibrary.addEventListener("click", newToLibrary );
+addToLibrary.addEventListener('click', newToLibrary);
+
+// Link remove button to the class function
+
+
+
+// The only explanation I have is that the modal is somehow interfering with the book being added to library
+// I don't understand as the book is being created and returned, stored in a variable but its not being added to the library.
+// Will have to try and remove the modal to see if this makes a difference.
+// It's worth a try.
+
+// I cant figure out what the fuck is going on. It's an object and has book inheritance but will not add to the library.
+// Getting very close to copying my old code and going through to change the CSS.
+// IT's baffling.
+
+// So apparently setting the newToLibrary function to have a return of library.addbook() has fixed it.
+// I truly don't understand how this makes a different and it's not how my prvious library app was coded.
+// It works but I'd be lying if I said I understand why.

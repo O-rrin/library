@@ -8,7 +8,7 @@ body {
 #wrapper {
     margin-left:auto;
     margin-right:auto;
-    width:100%px;
+    width:100%;
 }
 
 .header {
@@ -159,7 +159,7 @@ span{
     gap: 80px;
     justify-content: left;
     flex-wrap: wrap;
-    overflow: none;
+   
     
 
    
@@ -214,8 +214,6 @@ body{
 	background:    -moz-linear-gradient(left, #559ad4 0%, #559ad4 1%, rgba(255,255,255,0) 3%),    -moz-linear-gradient(-45deg, #52A5EA 0%,#3B8FD6 46%,#2A7DC2 90%,#3E97E4 100%);
 	background:      -o-linear-gradient(left, #559ad4 0%, #559ad4 1%, rgba(255,255,255,0) 3%),      -o-linear-gradient(-45deg, #52A5EA 0%,#3B8FD6 46%,#2A7DC2 90%,#3E97E4 100%);
 	margin:0px auto;
-	/* margin-top: -240px; */
-    /* margin-left: 40px; */
 	width:150px;
 	height: 200px;
 	border-radius: 10px 25px 25px 10px;
@@ -223,6 +221,8 @@ body{
 	border-left:1px solid #242424;        
     flex-grow: 0;
     flex-shrink: 0;
+    
+    
 }
 .book-text{
 	font-family: 'Oswald', sans-serif;
@@ -233,6 +233,8 @@ body{
 	text-shadow:0px 1px 3px #69AFEC;
 	font-size: 25px;
 	margin:0px;
+    
+    
 }
 .book-text{
 	font-family: 'Arial', sans-serif;
@@ -263,6 +265,10 @@ body{
 	margin-top: 40px;
 }
 
+.text-of-book{
+    margin-left: 5px;
+}
+
     /* Pop up form */
 
 #pop-up {
@@ -279,16 +285,20 @@ body{
     height: 0;
 }
 .carousel {
-    margin-left: 50px;
-    margin-top: -300px;
-    display: flex;
+    padding-top: 30px;
+    margin-left: 50px;  
     gap: 30px;
     max-width: 65vw;
+    min-height: 50vh;
+    max-height: 60vh;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: hidden;
+    overflow: scroll;
+    position: relative;
     
     
+   
 }
 
 .modal {
